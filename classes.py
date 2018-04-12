@@ -29,6 +29,29 @@ class Page:
             return False
     
     def add_css(self, css):
-        self.maincss =  css
+        self.maincss =  url_for('static', filename = css)
 
+class Tsumo:
+    """The Tsumo Object"""
+    
+    
+    def __init__(self, id = None , tsumo = None, translation = None, explanation = None):
+        
+        if id is not None:
+            self.id = id
+        else:
+            self.id = 1
 
+        if tsumo is not None:
+            self.tsumo = tsumo
+
+        else: 
+            tsumo = ""
+
+        if translation is not None:
+            self.translation = translation
+        
+        if explanation is not None:
+            self.explanation = explanation
+
+        

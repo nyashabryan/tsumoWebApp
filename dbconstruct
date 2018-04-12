@@ -1,0 +1,25 @@
+This is a file to describe the structure of the database in use. 
+
+The Database will be used to Store the API keys and the Tsumos and their meanings.
+
+Tables
+
+1. Tables of Keys 
+
+    Columns 
+
+    1. ID (Primary Key)
+    2. KeyName
+    3. KeyValue
+
+
+2. Table of Tsumo
+
+    Columns 
+
+    1. ID (Primary Key, Auto Increment)
+    2. Tsumo
+    3. Translation
+    4. Meaning
+
+
