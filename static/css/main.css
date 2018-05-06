@@ -16,13 +16,14 @@ body{
     font-size: 19px;
 
 }
-
-
 .tsumo-content{
 
     font-size: 16px;
 }
-
+.tsumo-translation{
+    font-size: 15px;
+    font-style: italic;
+}
 /* Footer */
 
 footer{

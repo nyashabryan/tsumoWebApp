@@ -1,17 +1,18 @@
 from flask import url_for
 
 class Page:
-    """ The Page Objects to be used to define attributes of the 
-        rendered pages.
+    """
+    The Page Objects to be used to define attributes of the 
+    rendered pages.
     """
 
     title = ""
-    maincss = ""
     lang = "en"
     keywords = []
 
-    def __init__(self, title):
+    def __init__(self, title, *args):
         self.title = title
+        self.maincss =  url_for('static', filename = "css/main.css")
         
     def change_lang(self, lang):
         self.lang = lang
@@ -27,12 +28,13 @@ class Page:
 
         else:
             return False
-    
-    def add_css(self, css):
-        self.maincss =  url_for('static', filename = css)
 
+    
+    
 class Tsumo:
-    """The Tsumo Object"""
+    """
+    The Tsumo Object
+    """
     
     
     def __init__(self, id = None , tsumo = None, translation = None, explanation = None):
@@ -50,8 +52,10 @@ class Tsumo:
 
         if translation is not None:
             self.translation = translation
+        else:
+            self.translation = ""
         
         if explanation is not None:
-            self.explanation = explanation
+            self.explanation = ""
 
         
