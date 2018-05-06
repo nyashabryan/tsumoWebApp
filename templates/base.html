@@ -10,8 +10,8 @@
 
     <meta name = "author" content= "http://nyashabryan.ga">
     <meta name = "application-name" content = "tsumoWebAPP">
-    <meta name = "description" content = "A simple Web App designed to View Shona Tsumo and their meanings.">
-    <meta name = "keywords" content = "Shona, chiShona, Shona Tsumo, Tsumo, WebApp, Proverbs, Learn Tsumo, Tsumo Meanings">
+    <meta name = "description" content = "Shona Tsumo Web App.">
+    <meta name = "keywords" content = "Shona, chiShona, Shona Tsumo, Tsumo, WebApp, Proverbs, Learn Tsumo, Tsumo Meanings, {{page.keywords}}">
 
     <meta name = "robots" content = "all">
 
@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <!-- CSS Stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href= {{ page.maincss }} />
 
     
@@ -30,43 +31,21 @@
 
 <body>
 
-    {% block top%}
-
-
-    {% endblock top %}
-
+    {% include 'top.html' %}
+    <br>
+    <br>
+    <br>
     {% block main %}
 
 
     {% endblock main %}
 
-
-
-    <!--Footer Section-->
-    <footer class = "fixed-bottom">
-        <div class = "container-fluid text-center bg-light">
-            <div class = "row">
-                <div class = "col-sm-11 col-md-6 col-lg-4 col-xl-3 text-center">
-                    <h4>Get in Contact</h4>
-
-                    <p>Nyasha Bryan</p>
-                    <p><a href = "http://nyashabryan.ga">Nyasha's Website</a></p>
-                    <p>Github</p>
-                    <p>Facebook</p>
-                    <p>Email</p>
-                </div>
-            </div>
-            <p>NyashaBryan &copy; 2018. All Rights Reserved.</p>
-
-        </div>
-    </footer>
-
+    {% include 'footer.html' %}
 
     <!--Scripts, Well JS Scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
 
 </body>
 </html>
